@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtnam = new System.Windows.Forms.TextBox();
             this.txtkq = new System.Windows.Forms.TextBox();
-            this.lsbkq = new System.Windows.Forms.ListBox();
+            this.lsbnam = new System.Windows.Forms.ListBox();
             this.btntinh = new System.Windows.Forms.Button();
             this.btnexit = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -69,14 +69,15 @@
             this.txtkq.Size = new System.Drawing.Size(175, 23);
             this.txtkq.TabIndex = 1;
             // 
-            // lsbkq
+            // lsbnam
             // 
-            this.lsbkq.FormattingEnabled = true;
-            this.lsbkq.ItemHeight = 16;
-            this.lsbkq.Location = new System.Drawing.Point(606, 96);
-            this.lsbkq.Name = "lsbkq";
-            this.lsbkq.Size = new System.Drawing.Size(248, 356);
-            this.lsbkq.TabIndex = 2;
+            this.lsbnam.FormattingEnabled = true;
+            this.lsbnam.ItemHeight = 16;
+            this.lsbnam.Location = new System.Drawing.Point(606, 96);
+            this.lsbnam.Name = "lsbnam";
+            this.lsbnam.Size = new System.Drawing.Size(248, 356);
+            this.lsbnam.TabIndex = 2;
+            this.lsbnam.SelectedIndexChanged += new System.EventHandler(this.lsbkq_SelectedIndexChanged);
             // 
             // btntinh
             // 
@@ -106,13 +107,13 @@
             this.ClientSize = new System.Drawing.Size(1200, 554);
             this.Controls.Add(this.btnexit);
             this.Controls.Add(this.btntinh);
-            this.Controls.Add(this.lsbkq);
+            this.Controls.Add(this.lsbnam);
             this.Controls.Add(this.txtkq);
             this.Controls.Add(this.txtnam);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -127,7 +128,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtnam;
         private System.Windows.Forms.TextBox txtkq;
-        private System.Windows.Forms.ListBox lsbkq;
+        private System.Windows.Forms.ListBox lsbnam;
         private System.Windows.Forms.Button btntinh;
         private System.Windows.Forms.Button btnexit;
     }
